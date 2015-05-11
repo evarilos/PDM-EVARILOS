@@ -1,3 +1,17 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+"""server_flask_evarilos_metrics.py: the PDM service."""
+
+__author__ = "Filip Lemic"
+__copyright__ = "Copyright 2015, EVARILOS Project"
+
+__version__ = "1.0.0"
+__maintainer__ = "Filip Lemic"
+__email__ = "lemic@tkn.tu-berlin.de"
+__status__ = "Development"
+
+
 import protobuf_json
 from flask import Flask, jsonify
 from flask import Response
