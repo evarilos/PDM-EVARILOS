@@ -24,7 +24,7 @@ db_id = 'test_db'
 # The name of the experiment in the database
 exp_id = 'test_exp'
 
-req = urllib2.Request(apiURL + 'evarilos/metrics/v1.0/database/' + db_id  + '/experiment', headers={"Content-Type": "application/json"}, data = coll_id)
+req = urllib2.Request(apiURL + 'evarilos/metrics/v1.0/database/' + db_id  + '/experiment', headers={"Content-Type": "application/json"}, data = exp_id)
 resp = urllib2.urlopen(req)
 response = json.loads(resp.read())
 print response	

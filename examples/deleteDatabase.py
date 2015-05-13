@@ -17,7 +17,7 @@ import urllib2
 import json
 
 # The URL where server listens
-apiURL = 'http://localhost:5001/'
+apiURL = 'http://ebp.evarilos.eu:5001/'
 
 # The ID of the database
 db_id = 'test_db'
