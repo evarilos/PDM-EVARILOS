@@ -171,12 +171,10 @@ def experiment(db_id, coll_id):
 @crossdomain(origin='*')
 def store_message(db_id, coll_id):
     
-    #experiment_collection = experiment_results_pb2.Experiment()
+    experiment_collection = experiment_results_pb2.Experiment()
 
     try:
-        experiment_collection = json.loads(request.data)
-        #print experiment_collection
-        #experiment_collection.ParseFromString(request.data)
+        experiment_collection.ParseFromString(request.data)
     except:
         return json.dumps('Experiment is not well defined!')
 
@@ -199,8 +197,7 @@ def store_message(db_id, coll_id):
         return json.dumps("No such experiment in the database!")
     
     try:
-        collection.insert(experiment_collection)
-        #collection.insert(protobuf_json.pb2json(experiment_collection))
+        collection.insert(protobuf_json.pb2json(experiment_collection))
     except:
         return json.dumps("Unable to store data into the database!")
 
