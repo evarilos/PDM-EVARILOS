@@ -20,7 +20,7 @@ import json
 apiURL = 'http://localhost:5001/'
 
 # The ID of the database
-db_id = 'test_db'
+db_id = 'example_db'
 
 req = RequestWithMethod(apiURL + 'evarilos/metrics/v1.0/database/' + db_id, 'DELETE', headers={"Content-Type": "application/json"})
 resp = urllib2.urlopen(req)
